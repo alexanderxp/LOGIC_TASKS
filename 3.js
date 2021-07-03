@@ -8,7 +8,7 @@
 let arr = [1, 2, 3, 4, 5, 6, 7];
 //  let arr = [7, 6, 8, 138, 11];
 
-let isArrSorted = function (array){
+function isArrSorted (array){
   if(!(array instanceof Array)){
     return null;
   };
