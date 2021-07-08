@@ -1,8 +1,8 @@
-/*
-3.  Написать функцию, которая принимает строку, 
-а на выходе возвращает ее зеркальное отображение. 
-Не использовать встроенные методы в JS, 
-разрешается только языковые конструкции (for, while и т.д.).
+/**
+*  returns a mirroring of the string
+*  
+*  @param {String} String
+*  @returns {String} - a mirroring of the string
 */
 
 " use strict "

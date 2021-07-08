@@ -1,14 +1,8 @@
-/*
-4.  Задача на замыкания. Реализовать функцию, 
-которая будет при каждом вызове и передаче строкового значения 
-конкатенировать строку используя скоуп замыкания, 
-а после вызова ее без параметров выдать результат. Например 
-concat('test string 1');
-concat('test2');
-concat('finish');
-console.log(concat());
-
-» 'test string 1test2finish'
+/**
+*  return contacts the string parameters when calling without parameters, after of its previous calls with string parameters
+*  
+*  @param {String} String
+*  @returns {String} - contacts the string parameters
 */
 
 " use strict "

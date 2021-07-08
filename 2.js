@@ -1,9 +1,8 @@
-/*
-2. Написать функцию, которая принимает числовое значение, 
-и выводит результат сложения всех вхождений в последовательности. 
-Использовать рекурсию. 
-Например передаем 2, функция возвращает 1+2. 
-Передаем 4, функция возвращает 1+2+3+4 ит.д.
+/**
+*  returns the result of adding all occurrences in a sequence
+*  
+*  @param {Number} Number
+*  @returns {Number} - result of adding all occurrences in a sequence
 */
 
 " use strict "
