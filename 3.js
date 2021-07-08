@@ -1,27 +1,24 @@
-/**
-*  Returns true / false if the array is sorted / not sorted 
-*  
-*  @param {Array} array - passed array
-*  @returns {Boolean} - true or false depending on whether the array is sorted or not 
+/*
+3.  Написать функцию, которая принимает строку, 
+а на выходе возвращает ее зеркальное отображение. 
+Не использовать встроенные методы в JS, 
+разрешается только языковые конструкции (for, while и т.д.).
 */
 
-"use strict"
+" use strict "
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
-//  let arr = [7, 6, 8, 138, 11];
+let lala = "lala";
 
-function isArrSorted (array){
+function strReverseBack(str){
 
-  if(!(array instanceof Array)){
-    return null;
-  };
+  if(!String(str) ){
+    return NaN;
+  }
 
-  let num;
-
-  for(num = 0; num > array.length - 1; num ++);{
-    return (array[num] < array[num+1]);
-  };
-
-};
-
-alert(isArrSorted(arr));
+  let strBack = ' ';
+  for(let i=0; i< str.length ; i++ ) {
+    strBack += str[ (str.length - 1 ) - i ];
+  }
+  return strBack;
+}
+alert(strReverseBack(lala));

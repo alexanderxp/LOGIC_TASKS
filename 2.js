@@ -1,28 +1,23 @@
-/**
-*  Returns the average of all elements of the passed array 
-*  
-*  @param {Array} array - passed array
-*  @returns {Number} - the average of all elements of the passed array 
+/*
+2. Написать функцию, которая принимает числовое значение, 
+и выводит результат сложения всех вхождений в последовательности. 
+Использовать рекурсию. 
+Например передаем 2, функция возвращает 1+2. 
+Передаем 4, функция возвращает 1+2+3+4 ит.д.
 */
 
-"use strict"
+" use strict "
 
-let arr = [10, 2, 3, 15, 46, 98];
-// let arr = [1, 2, 3, 4, 5, 6, 7];
+let numFive = 5;
 
-function averageNum(array) {
+function addNumsAll(num){
 
-  if(!(array instanceof Array)){
-      return null;
-  };
+  if(!Number(num)){
+    return null;
+  }
 
-  let sum = 0;
-
-  for(let i = 0; i < array.length; i++){
-    sum += array[i];
-  };
-  
-  return ( sum / array.length );
+  if(num == 0 )
+    return 0;
+    return num + addNumsAll(num-1);
 }
-
-alert(averageNum(arr));
+alert(addNumsAll(numFive));

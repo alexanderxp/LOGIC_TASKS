@@ -1,35 +1,19 @@
-/**
-*  Returns the minimum and maximum value of an array 
-*  
-*  @param {Array} array - passed array 
-*  @returns {Object} - contains the min and max properties with the minimum and maximum value of the array element
+/*
+1. Написать функцию вычисления факториала. 
+Передаваемый параметр в функцию - число, факториал которого нужно посчитать. 
+Возвращаемое значение - результат. Выполнить используя рекурсию.
 */
-"use strict"
 
-let arr = [10, 2, 3, 15, 46, 98];
+" use strict "
 
-function maxNum(array){
-  
-  if(!(array instanceof Array)){
+let numFive = 5;
+
+function calcFactorial(n) {
+
+  if(!Number(n)){
     return null;
-  };
+  }
 
-  let min = array[0];
-  let max = array[0];
-
-  for(var i=1; i<array.length; i++){
-
-    if(min > array[i]){
-      min = array[i];   
-    }
-
-    if(max < array[i]){
-      max = array[i];   
-    }
-
-  };
-  return {min,max};
+  return ( n != 1 ) ? (n * calcFactorial(n-1)) : 1;
 }
-
-console.log(maxNum(arr));
-
+alert(calcFactorial(numFive));
