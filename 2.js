@@ -1,22 +1,28 @@
 /**
-*  returns the result of adding all occurrences in a sequence
+*  Returns the average of all elements of the passed array 
 *  
-*  @param {Number} Number
-*  @returns {Number} - result of adding all occurrences in a sequence
+*  @param {Array} array - passed array
+*  @returns {Number} - the average of all elements of the passed array 
 */
 
-" use strict "
+"use strict"
 
-let numFive = 5;
+let arr = [10, 2, 3, 15, 46, 98];
+// let arr = [1, 2, 3, 4, 5, 6, 7];
 
-function addNumsAll(num){
+function averageNum(array) {
 
-  if(!Number(num)){
-    return null;
-  }
+  if(!(array instanceof Array)){
+      return null;
+  };
 
-  if(num == 0 )
-    return 0;
-    return num + addNumsAll(num-1);
+  let sum = 0;
+
+  for(let i = 0; i < array.length; i++){
+    sum += array[i];
+  };
+  
+  return ( sum / array.length );
 }
-alert(addNumsAll(numFive));
+
+alert(averageNum(arr));

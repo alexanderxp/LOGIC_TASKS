@@ -1,29 +1,20 @@
 /**
-*  return contacts the string parameters when calling without parameters, after of its previous calls with string parameters
+*  returns the factorial of a number
 *  
-*  @param {String} String
-*  @returns {String} - contacts the string parameters
+*  @param {Number} Number
+*  @returns {Number} - factorial of a number
 */
 
 " use strict "
 
-function concatString(){
-  let strIn = "";
+let numFive = 5;
 
-  return function(piece){
+function calcFactorial(n) {
 
-    if(arguments.length == 0 ){
-      return strIn;
-    }
+  if(!Number(n)){
+    return null;
+  }
 
-    strIn = strIn + "   " + piece;
-  };
-
-};
-let makeConcat = concatString();
-
-makeConcat('test string 1');
-makeConcat('test2');
-makeConcat('finish');
-
-console.log(makeConcat());
+  return ( n != 1 ) ? (n * calcFactorial(n-1)) : 1;
+}
+alert(calcFactorial(numFive));

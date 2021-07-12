@@ -1,20 +1,35 @@
 /**
-*  returns the factorial of a number
+*  Returns the minimum and maximum value of an array 
 *  
-*  @param {Number} Number
-*  @returns {Number} - factorial of a number
+*  @param {Array} array - passed array 
+*  @returns {Object} - contains the min and max properties with the minimum and maximum value of the array element
 */
+"use strict"
 
-" use strict "
+let arr = [10, 2, 3, 15, 46, 98];
 
-let numFive = 5;
-
-function calcFactorial(n) {
-
-  if(!Number(n)){
+function maxNum(array){
+  
+  if(!(array instanceof Array)){
     return null;
-  }
+  };
 
-  return ( n != 1 ) ? (n * calcFactorial(n-1)) : 1;
+  let min = array[0];
+  let max = array[0];
+
+  for(var i=1; i<array.length; i++){
+
+    if(min > array[i]){
+      min = array[i];   
+    }
+
+    if(max < array[i]){
+      max = array[i];   
+    }
+
+  };
+  return {min,max};
 }
-alert(calcFactorial(numFive));
+
+console.log(maxNum(arr));
+
