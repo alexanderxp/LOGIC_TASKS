@@ -1,29 +1,32 @@
-/**
-*  return contacts the string parameters when calling without parameters, after of its previous calls with string parameters
-*  
-*  @param {String} String
-*  @returns {String} - contacts the string parameters
+/*
+3. Задача на Map, Set, WeakMap, WeakSet. 
+Есть массив объектов. У каждого объекта есть id 
+
+const arr = [ { id: 1 }, { id: 2 }, { id: 3 }, { id: 1 }]
+
+. В массиве могут быть дубликаты. 
+
+Написать функцию, которая будет удалять дубликаты из массива . 
+Использовать вышеперечисленные инструменты для решения задачи. 
+В дополнение к этому - разрешается использовать любые средства ES6.
 */
 
 " use strict "
 
-function concatString(){
-  let strIn = "";
+const arr = [ { id: 1 }, { id: 2 }, { id: 3 }, { id: 1 }]
 
-  return function(piece){
+function delArrDubl(arr){
+	
+  if (!(arr instanceof Array)) {
+    alert('You must enter an array ');
+    return null;
+  }
 
-    if(arguments.length == 0 ){
-      return strIn;
-    }
-
-    strIn = strIn + "   " + piece;
-  };
-
-};
-let makeConcat = concatString();
-
-makeConcat('test string 1');
-makeConcat('test2');
-makeConcat('finish');
-
-console.log(makeConcat());
+  let changeArr = arr.map(item => {
+	return  [item.id, item]
+  })
+  
+  return [...new Map(changeArr).values()]
+  
+}
+console.log(delArrDubl(arr)); 

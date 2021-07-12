@@ -1,22 +1,36 @@
-/**
-*  returns the result of adding all occurrences in a sequence
-*  
-*  @param {Number} Number
-*  @returns {Number} - result of adding all occurrences in a sequence
+/*
+1. Написать функцию-консторуктор, которая в качестве параметров 
+принимает 3 значения - имя, фамилия и возраст. 
+
+Функция-консторуктор также будет иметь метод print, 
+которая будет выводить форматированный вывод в консоль имени, фамилии и возраста. 
+
+
+Пример:
+let user = new User("Вася");
+
+
+user.print();
+» Name: John, last name: Smith, age: 30.
+
 */
 
 " use strict "
 
-let numFive = 5;
-
-function addNumsAll(num){
-
-  if(!Number(num)){
-    return null;
+function User(name, lastName, age) {
+  this.name = name;
+  this.lastName = lastName;
+  this.age = age;
+ 
+  this.print = function(){
+    console.log("Name: " + this.name + ", last name: " + this.lastName  + ", age: " + this.age);
   }
-
-  if(num == 0 )
-    return 0;
-    return num + addNumsAll(num-1);
 }
-alert(addNumsAll(numFive));
+
+
+let user = new User("John","Smith",30);
+
+// console.log(user.name);  
+// для примера работы
+
+user.print();

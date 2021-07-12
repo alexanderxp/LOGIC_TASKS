@@ -1,24 +1,40 @@
-/**
-*  returns a mirroring of the string
-*  
-*  @param {String} String
-*  @returns {String} - a mirroring of the string
+/*
+2. Задача на рефакторинг и деструктуризацию. Есть код:
+
+const sarah = {
+  name: 'Sarah',
+  job: {
+    name: 'Andersen',
+    hiringDate: '23.07.2020'
+  }
+}
+
+function printJobName(user) {
+  console.log(user.job.name);
+}
+
+printJobName(sarah);
+
+необходимо осуществить рефакторинг используя деструктуризацию 
+над функцией без потери функциональности.
+
 */
 
 " use strict "
 
-let lala = "lala";
-
-function strReverseBack(str){
-
-  if(!String(str) ){
-    return NaN;
+const sarah = {
+  name: 'Sarah',
+  job: {
+    name: 'Andersen',
+    hiringDate: '23.07.2020'
   }
-
-  let strBack = ' ';
-  for(let i=0; i< str.length ; i++ ) {
-    strBack += str[ (str.length - 1 ) - i ];
-  }
-  return strBack;
 }
-alert(strReverseBack(lala));
+
+
+function printJobName({  job:{ name = 0, hiringDate = 0 } }) {
+  console.log(name);
+}
+
+printJobName(sarah);
+
+
