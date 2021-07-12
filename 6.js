@@ -31,7 +31,7 @@ const sarah = {
 }
 
 
-function printJobName({  job:{ name = 0, hiringDate = 0 } }) {
+function printJobName({  job:{ name, hiringDate } }) {
   console.log(name);
 }
 
