@@ -23,6 +23,7 @@ function Admin(name, age, role) {
 "use strict"
 
 class User {
+  
   constructor(name, age) {
   this.name = name;
   this.age = age;
@@ -31,6 +32,7 @@ class User {
   printName() {
     console.log(this.name);
   }
+
 }
 
 class Admin extends User {
@@ -42,6 +44,7 @@ class Admin extends User {
   printRole() {
     console.log(this.role);
   }
+
 }
 
 let adm1 = new Admin('Blablabla',123,'user1');
