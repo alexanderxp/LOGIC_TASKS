@@ -22,7 +22,7 @@ function subtractingDates() {
   let before = new Date(); 
 
   for (let i = 0; i < 100000; i++) {  // цикл просто для разделения времени              
-  let doSomething = i * i * i;          
+    let doSomething = i * i * i;          
   }
   
   let after = Date.now();                                                 
